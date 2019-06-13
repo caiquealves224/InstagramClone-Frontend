@@ -1,14 +1,22 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import "./Header.css";
 
-class Header extends Component{
+import logo from "../assets/logo.svg"
+import camera from "../assets/camera.svg"
+
+export default class Header extends Component{
     render(){
         return(
          <header id="main-header">
-             <div id="header-content">
-                <img src="" alt="Insta" />
-                <img src="" alt="Envir Publicação" />
+             <div className="header-content">
+                <Link to="/">
+                    <img src={logo} alt="Insta" />
+                </Link>
+                <Link to="/new">
+                    <img src={camera} alt="Envir Publicação" />
+                </Link>
              </div>
          </header>   
         )
